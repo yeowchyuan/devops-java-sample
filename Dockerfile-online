@@ -1,7 +1,9 @@
 FROM openjdk:23-oraclelinux8
 
+COPY target/*.jar /home
+
 WORKDIR /home
 
-COPY target/*.jar /home
+
 
 ENTRYPOINT java -jar *.jar
